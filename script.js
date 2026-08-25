@@ -133,30 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 8. Contact Form Handling
-    const contactForm = document.getElementById('contact-form');
-    const formAlert = document.getElementById('form-alert');
-
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        // Perform basic validation
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        if (name && email && subject && message) {
-            formAlert.className = 'form-alert success';
-            formAlert.textContent = 'Thank you, Muhammad Rehan Khan will get back to you shortly!';
-            contactForm.reset();
-
-            setTimeout(() => {
-                formAlert.style.display = 'none';
-            }, 5000);
-        }
-    });
-
     // 9. Download CV Button (Allow natural download link to work)
     const downloadBtn = document.getElementById('download-cv');
     if (downloadBtn) {
